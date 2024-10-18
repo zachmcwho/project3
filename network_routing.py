@@ -1,12 +1,12 @@
-
 import math
 from collections import defaultdict
 from HeapPriorityQueue import HeapPQ
+from LinearPriorityQueue import LinearPQ
 
 def find_shortest_path_with_heap(
         graph: dict[int, dict[int, float]],
         source: int,
-        target: int
+        target: int                                                
 ) -> tuple[list[int], float]:
     
     pq = HeapPQ()  
@@ -42,15 +42,6 @@ def find_shortest_path_with_heap(
                     pq.decrease_key(neighbor, dist[neighbor])
 
     return [], -1
-    """
-    Find the shortest (least-cost) path from `source` to `target` in `graph`
-    using the heap-based algorithm.
-
-    Return:
-        - the list of nodes (including `source` and `target`)
-        - the cost of the path
-    """
-from LinearPriorityQueue import LinearPQ
 
 def find_shortest_path_with_array(
         graph: dict[int, dict[int, float]],
@@ -91,12 +82,3 @@ def find_shortest_path_with_array(
                     pq.decrease_key(neighbor, dist[neighbor])
 
     return [], -1
-
-    """
-    Find the shortest (least-cost) path from `source` to `target` in `graph`
-    using the array-based (linear lookup) algorithm.
-
-    Return:
-        - the list of nodes (including `source` and `target`)
-        - the cost of the path
-    """

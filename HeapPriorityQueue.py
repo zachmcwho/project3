@@ -22,7 +22,7 @@ class HeapPQ:
     def decrease_key(self, node, new_priority):
         #update and bubble up
         index = self.position_map[node]
-        self.heap[index][1] = new_priority
+        self.heap[index] = (node, new_priority)
         self.bubble_up(index)
 
     def swap(self, index1, index2):
@@ -63,12 +63,10 @@ class HeapPQ:
         
 
     def get_parent_index(self, index):
-        if index == 0:
+        if index <= 0:
             return None
-        if index == 1 or index == 2: 
-            return 0
         else:
-            return index // 2
+            return (index - 1) // 2
     
     def get_left_child_index(self, index):
         return index * 2 + 1
