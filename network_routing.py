@@ -2,6 +2,7 @@ import math
 from collections import defaultdict
 from HeapPriorityQueue import HeapPQ
 from LinearPriorityQueue import LinearPQ
+from LinearPriorityQueueDict import LinearPQDict
 
 def find_shortest_path_with_heap(
         graph: dict[int, dict[int, float]],
@@ -27,7 +28,7 @@ def djikstras(graph: dict[int, dict[int, float]],
         pq_implementation
 ) -> tuple[list[int], float]:
     
-    pq = pq_implementation
+    pq = pq_implementation()
     dist = defaultdict(lambda: math.inf)
     visited = set()
     prev = {}

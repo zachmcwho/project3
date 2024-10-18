@@ -1,10 +1,11 @@
 
 from LinearPriorityQueue import LinearPQ
 from HeapPriorityQueue import HeapPQ
+from LinearPriorityQueueDict import LinearPQDict
 class TestLinearPQ:
 
     def test_insert_and_extract_min(self):
-        pq = LinearPQ()
+        pq = LinearPQDict()
         pq.insert1('A', 10)
         pq.insert1('B', 5)
         pq.insert1('C', 8)
@@ -25,7 +26,7 @@ class TestLinearPQ:
         assert priority == 10
 
     def test_decrease_key(self):
-        pq = LinearPQ()
+        pq = LinearPQDict()
         pq.insert1('A', 10)
         pq.insert1('B', 5)
         pq.insert1('C', 8)
@@ -58,7 +59,7 @@ class TestLinearPQ:
         assert priority == 100
 
     def test_decrease_key_non_existent_node(self):
-        pq = LinearPQ()
+        pq = LinearPQDict()
         pq.insert1('A', 10)
         pq.insert1('B', 20)
 
@@ -71,7 +72,7 @@ class TestLinearPQ:
         assert priority == 10
 
     def test_decrease_key_with_multiple_updates(self):
-        pq = LinearPQ()
+        pq = LinearPQDict()
         pq.insert1('A', 10)
         pq.insert1('B', 20)
         pq.insert1('C', 15)
@@ -98,7 +99,7 @@ class TestLinearPQ:
         assert priority == 10
 
 def test_insert_and_extract_min():
-        pq = HeapPQ()
+        pq = HeapPQDict()
         pq.insert1('A', 10)
         pq.insert1('B', 5)
         pq.insert1('C', 8)

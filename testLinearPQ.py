@@ -1,8 +1,8 @@
 
-from LinearPriorityQueue import LinearPQ
+from LinearPriorityQueueDict import LinearPQDict
 
 def test_decrease_key():
-    pq = LinearPQ()
+    pq = LinearPQDict()
     pq.insert1('A', 10)
     pq.insert1('B', 5)
     pq.insert1('C', 8)
