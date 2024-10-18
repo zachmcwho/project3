@@ -62,7 +62,7 @@ def test_large_network_heap(find_shortest_path_with_heap):
     large_test(find_shortest_path_with_heap)
 
 
-@max_score(8)
+@max_score(8) 
 @with_import('network_routing')
 def test_large_network_array(find_shortest_path_with_array):
     large_test(find_shortest_path_with_array)
