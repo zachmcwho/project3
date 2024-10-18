@@ -19,7 +19,7 @@ def find_shortest_path_with_array(
         target: int
 ) -> tuple[list[int], float]:
     
-    return djikstras(graph, source, target, LinearPQ)
+    return djikstras(graph, source, target, LinearPQDict)
     
 
 def djikstras(graph: dict[int, dict[int, float]],

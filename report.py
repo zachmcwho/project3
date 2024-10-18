@@ -3,7 +3,7 @@ from main import find_shortest_path_with_array
 from main import find_shortest_path_with_heap
 from time import time
 
-def run_dijkstra_experiment(seed: int, size: int, density: float, noise: float, source: int, target: int, runs: int = 1):
+def run_dijkstra_experiment(seed: int, size: int, density: float, noise: float, source: int, target: int, runs: int = 5):
     total_heap_time = 0
     total_array_time = 0
     total_edges = 0
@@ -50,11 +50,11 @@ if __name__ == '__main__':
 
     test_cases = [
         # First table values
-        # (1000, 0.01), 
-        # (5000, 0.002), 
-        # (10000, 0.001), 
-        # (50000, 0.0002), 
-        # (100000, 0.0001),
+        (1000, 0.01), 
+        (5000, 0.002), 
+        (10000, 0.001), 
+        (50000, 0.0002), 
+        (100000, 0.0001),
 
         # Second table values
         (1000, 1), 
@@ -111,3 +111,27 @@ if __name__ == '__main__':
 # n = 4000, density = 1, # edges = 15996000.0, heap time = 4.00280499458313, linear time = 2.631787061691284
 # n = 5000, density = 1, # edges = 24995000.0, heap time = 5.651551008224487, linear time = 4.143615961074829
 # n = 6000, density = 1, # edges = 35994000.0, heap time = 7.672486782073975, linear time = 5.824986219406128
+
+
+# n = 1000, density = 0.01, # edges = 10000.0, graph generation time = 0.033239126205444336, edge_count = 5.125999450683594e-05, heap time = 0.00944056510925293, linear time = 0.013390445709228515
+# n = 5000, density = 0.002, # edges = 50000.0, graph generation time = 0.07538104057312012, edge_count = 0.0002522468566894531, heap time = 0.03916950225830078, linear time = 0.25856833457946776
+# n = 10000, density = 0.001, # edges = 100000.0, graph generation time = 0.14716887474060059, edge_count = 0.0004878044128417969, heap time = 0.04231538772583008, linear time = 0.4276014804840088
+# n = 50000, density = 0.0002, # edges = 500000.0, graph generation time = 0.77577805519104, edge_count = 0.0023238658905029297, heap time = 0.2459270477294922, linear time = 8.846491479873658
+# n = 100000, density = 0.0001, # edges = 1000000.0, graph generation time = 1.6274340152740479, edge_count = 0.006541252136230469, heap time = 0.7791440963745118, linear time = 65.52773480415344
+# n = 1000, density = 1, # edges = 999000.0, graph generation time = 1.2324819564819336, edge_count = 8.0108642578125e-05, heap time = 0.2064115047454834, linear time = 0.0994659423828125
+# n = 2000, density = 1, # edges = 3998000.0, graph generation time = 5.098598957061768, edge_count = 0.00018310546875, heap time = 0.7667218685150147, linear time = 0.39360713958740234
+# n = 3000, density = 1, # edges = 8997000.0, graph generation time = 10.568352937698364, edge_count = 0.00028586387634277344, heap time = 1.6733731269836425, linear time = 0.9945423603057861
+# n = 4000, density = 1, # edges = 15996000.0, graph generation time = 18.796306848526, edge_count = 0.0006818771362304688, heap time = 3.1063557624816895, linear time = 1.958125352859497
+# n = 5000, density = 1, # edges = 24995000.0, graph generation time = 30.755205869674683, edge_count = 0.0004642009735107422, heap time = 4.373342704772949, linear time = 3.028878021240234
+# n = 6000, density = 1, # edges = 35994000.0, graph generation time = 42.44235110282898, edge_count = 0.0005803108215332031, heap time = 6.031571578979492, linear time = 4.427707290649414
+# n = 1000, density = 0.01, # edges = 10000.0, heap time = 0.00944056510925293, linear time = 0.013390445709228515
+# n = 5000, density = 0.002, # edges = 50000.0, heap time = 0.03916950225830078, linear time = 0.25856833457946776
+# n = 10000, density = 0.001, # edges = 100000.0, heap time = 0.04231538772583008, linear time = 0.4276014804840088
+# n = 50000, density = 0.0002, # edges = 500000.0, heap time = 0.2459270477294922, linear time = 8.846491479873658
+# n = 100000, density = 0.0001, # edges = 1000000.0, heap time = 0.7791440963745118, linear time = 65.52773480415344
+# n = 1000, density = 1, # edges = 999000.0, heap time = 0.2064115047454834, linear time = 0.0994659423828125
+# n = 2000, density = 1, # edges = 3998000.0, heap time = 0.7667218685150147, linear time = 0.39360713958740234
+# n = 3000, density = 1, # edges = 8997000.0, heap time = 1.6733731269836425, linear time = 0.9945423603057861
+# n = 4000, density = 1, # edges = 15996000.0, heap time = 3.1063557624816895, linear time = 1.958125352859497
+# n = 5000, density = 1, # edges = 24995000.0, heap time = 4.373342704772949, linear time = 3.028878021240234
+# n = 6000, density = 1, # edges = 35994000.0, heap time = 6.031571578979492, linear time = 4.427707290649414
